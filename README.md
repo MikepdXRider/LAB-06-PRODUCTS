@@ -55,7 +55,29 @@ Product Cards:
 `Console.log(*EVERYTHING*);`
 <hr>
 
+8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 
-<!-- 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage? -->
+```javascript
+const productsObj = [
+    product1 = {
+        id: 01,
+        name: 'product-name',
+        img: src('.assets/product-image.JPG'),
+        description: 'Product description that is cool AF',
+        category: 'product-category',
+        price: number value
+    },
+    product2 = {
+        id: 02,
+        'etc..'
+    },
+    product3 = {},
+    product4 = {},
+    product5 = {},
+    'etc..'
+]
+```
+<hr>
+
 <!-- 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks. -->
 
