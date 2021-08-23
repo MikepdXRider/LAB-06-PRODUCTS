@@ -2,9 +2,9 @@
 1) Make a drawing of your app. Simple "wireframes"
 
 ![page-layout](./assets/page-layout-wireframe.JPG)
-Product Cards:
 
-![product-card](assets\product-card-layout.JPG)
+Product Cards:
+![product-card](./assets/product-card-layout.JPG)
 
 
 <hr>
