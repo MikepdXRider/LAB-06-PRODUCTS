@@ -4,7 +4,7 @@
 ![page-layout](./assets/page-layout-wireframe.JPG)
 Product Cards:
 
-![product-card](assets\product-card-layout.JPG)
+![product-card](./assets/product-card-layout.JPG)
 
 
 <hr>
