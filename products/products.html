@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href=".//products.css">
+    <link rel="stylesheet" href="./products.css">
     <title>Products</title>
 </head>
 
@@ -20,10 +20,26 @@
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="../assets/alchemy-logo.png" />
             <h2>
                 Welcome to The Products Page!
             </h2>
+
+            <div class="product-container">
+                <ul class="products-list" id="products-list">
+                    <li class="product-list-item">
+                        <div class="title-button-container">
+                            <h3 class="product-name">Product Name</h3>
+                            <button class="add-to-cart-button" id="add-to-cart-button">Add</button>
+                        </div>
+                        <img src="https://placekitten.com/320/200" alt="product image" />
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="flex-price-category">
+                            <p>Category</p>
+                            <p>Price</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
