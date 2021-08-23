@@ -15,6 +15,7 @@ h2,
 .products-list{   
     display: grid;
     place-items: center;
+    gap: 10px;
 }
 
 /*Product card design*/
