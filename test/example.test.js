@@ -6,7 +6,7 @@ const test = QUnit.test;
 test('input an object and return an HTML element', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<li class="product-list-item"><div class="title-button-container"><h3 class="product-name">product-name</h3><button class="add-to-cart-button" id="add-to-cart-button">Add</button></div><img src="https://placekitten.com/320/200" alt="product image" /><p class="description">Product description that is cool AF</p><div class="flex-price-category"><p>product-category</p><p>$4</p></div</li>';
+    const expected = '<li class="product-list-item"><div class="title-button-container"><h3 class="product-name">product-name</h3><button class="add-to-cart-button" id="add-to-cart-button">Add</button></div><img src="https://placekitten.com/320/200" alt="product-image"><p class="description">Product description that is cool AF</p><div class="flex-price-category"><p>product-category</p><p>$4</p></div></li>';
     
     //Act 
     // Call the function you're testing and set the result to a const
