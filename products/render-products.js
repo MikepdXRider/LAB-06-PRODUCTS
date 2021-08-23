@@ -21,7 +21,7 @@ export function renderProducts(obj){
     h3.classList.add('product-name');
     button.classList.add('add-to-cart-button');
     button.setAttribute('id', 'add-to-cart-button');
-    img.setAttribute('alt', 'product-image')
+    img.setAttribute('alt', 'product-image');
     descriptionP.classList.add('description');
     priceDiv.classList.add('flex-price-category');
 
