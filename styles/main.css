@@ -37,7 +37,7 @@ main{
 /*  */
 
 h1{
-    font-size: clamp(1rem, 2rem);
+    font-size: clamp(1rem, 1.5rem, 2.5rem);
 }
 
 button{
