@@ -1,4 +1,3 @@
-import { arrayOfCartObj } from './cart-data.js';
 import { findById, calcItemTotal } from '../utils.js';
 import { productsArray } from '../products/duckys.js';
 

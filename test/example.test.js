@@ -1,6 +1,9 @@
 // IMPORT MODULES under test here:
 import { renderProducts } from '../products/render-products.js';
 import { renderLineItems } from '../shopping-cart/render-line-items.js';
+import { calcOrderTotal } from '../utils.js';
+import { productsArray } from '../products/duckys.js';
+import { arrayOfCartObj } from '../shopping-cart/cart-data.js';
 
 const test = QUnit.test;
 
@@ -25,10 +28,10 @@ test('input an object and return an HTML element', (expect) => {
     expect.equal(actual.outerHTML, expected);
 });
 
-test('input an object and return an HTML element', (expect) => {
+test('Input a cart object into renderLineItems function, expect a string of HTML', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<tr><td>Classic Ducky</td><td>250000</td><td>2</td><td>500000</td></tr>'
+    const expected = '<tr><td>Classic Ducky</td><td>250000</td><td>2</td><td>500000</td></tr>';
     // Call the function you're testing and set the result to a const
     const actual = renderLineItems({ id: 1, quantity: 2 });
 
@@ -36,3 +39,35 @@ test('input an object and return an HTML element', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual.outerHTML, expected);
 });
+
+
+test('Input arrayOfCartObj array and productsArray into calcOrderTotal function, expect 6000000 out', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = '$250,000.00';
+    // Call the function you're testing and set the result to a const
+    const actual = calcOrderTotal([{ id: 1, quantity: 1 }], [{
+        id: 1,
+        name: 'Classic Ducky',
+        img: '../assets/classic-ducky.png',
+        description: 'Are all your friends "getting into coding"? This is perfect present for all the junior developers you might know.',
+        category: 'Junior Dev',
+        price: 250000
+    }]);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+// Test only works if cart and products are static.
+// test('Input arrayOfCartObj array and productsArray into calcOrderTotal function, expect 6000000 out', (expect) => {
+//     //Arrange
+//     // Set up your arguments and expectations
+//     const expected = '$6,000,000.00';
+//     // Call the function you're testing and set the result to a const
+//     const actual = calcOrderTotal(arrayOfCartObj, productsArray);
+//     //Expect
+//     // Make assertions about what is expected versus the actual result
+//     expect.equal(actual, expected);
+// });
