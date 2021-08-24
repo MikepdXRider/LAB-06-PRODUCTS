@@ -25,6 +25,10 @@ export function renderProducts(obj){
     descriptionP.classList.add('description');
     priceDiv.classList.add('flex-price-category');
 
+    button.addEventListener('click', () => {
+        alert(`You selected ${obj.name}!`);
+    });
+
     titleDiv.append(h3, button);
     priceDiv.append(categoryP, priceP);
     li.append(titleDiv, img, descriptionP, priceDiv);
