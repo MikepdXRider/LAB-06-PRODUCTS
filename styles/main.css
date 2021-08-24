@@ -59,4 +59,20 @@ button:active{
 
 footer{
     margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
 }
+
+.nav-link{
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.nav-link:active{
+    color: black;
+    background: white;
+}
+
