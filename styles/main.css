@@ -63,6 +63,10 @@ footer{
     gap: 10px;
 }
 
+.nav-link-container{
+    margin-top: 10px;
+}
+
 .nav-link{
     color: white;
     background-color: black;
