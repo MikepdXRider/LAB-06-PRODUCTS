@@ -1,16 +1,25 @@
 /* Product page design */
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;  
+}
+
+header{
+    margin-bottom: 10px;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
 h2,
 .description {
     text-align: center;
 }
-
-/* Not doing anything */
-/* .product.container{
-    max-width: 70em;
-    border: 1px solid black;
-} */
-
-
 
 .products-list{   
     display: grid;
@@ -20,10 +29,8 @@ h2,
 
 /*Product card design*/
 .product-list-item{
-    max-width: 320px; 
-    border: 2px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    max-width: 280px; 
+    border: 3px solid black;
 }
 
 .title-button-container{
@@ -58,6 +65,7 @@ button:hover{
 
 img{
     max-width: 100%;
+    border-bottom: ;
 }
 
 .flex-price-category{
@@ -67,5 +75,28 @@ img{
 
 .flex-price-category p{
     font-weight: bold;
-    font-size: 0.80rem;
+    font-size: 0.90em;
 }
+
+h3{
+    padding: 10px;
+    margin: 10px;
+}
+
+p{
+    padding: 10px;
+    margin: 5px;
+}
+
+footer{
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 400px){
+    .products-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
