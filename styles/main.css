@@ -60,7 +60,7 @@ button:active{
 footer{
     margin-top: 10px;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .nav-link-container{
