@@ -10,6 +10,10 @@
     font-family: 'Roboto Mono', monospace;
 }
 
+header{
+    margin-bottom: 10px;
+}
+
 header, footer {
  background-color: black;
  color: white;
@@ -31,3 +35,28 @@ main{
     min-height: 80%;
 }
 /*  */
+
+h1{
+    font-size: clamp(1rem, 1.5rem, 2.5rem);
+}
+
+button{
+    color: white;
+    background-color: black;
+    border: 2px rgb(30, 255, 0) solid;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+button:active{
+    color: rgb(0, 0, 0);
+    background-color:rgb(30, 255, 0);
+    border: 2px black solid;
+}
+
+footer{
+    margin-top: 10px;
+}
