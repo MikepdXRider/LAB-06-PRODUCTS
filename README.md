@@ -81,3 +81,4 @@ const productsObj = [
 
 <!-- 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks. -->
 
+[Image resources](https://www.stickpng.com/search?q=rubber%20duck&page=1)
