@@ -10,7 +10,7 @@ export function renderProducts(obj){
     const priceP = document.createElement('p');
 
     h3.textContent = obj.name;
-    button.textContent = 'Add';
+    button.textContent = '+';
     img.src = obj.img;
     descriptionP.textContent = obj.description;
     categoryP.textContent = obj.category;
