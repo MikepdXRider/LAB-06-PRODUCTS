@@ -8,27 +8,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="./products.css">
+    <link rel="stylesheet" href="./shopping-cart.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <title>Dev-Ducky: Products</title>
+    <title>Dev-Ducky: Cart</title>
 </head>
 
 <body>
     <header>
         <h1>
-            Choose your ducky, dev!
+            Cart
         </h1>
     </header>
     <main>
         <section class="main-section">
-            <div class="product-container">
-                <ul class="products-list" id="products-list">
-                    
-                </ul>
+            <div class="table-container">
+                <table class="darkTable">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="t-body">
+                        <!-- Table data injected here -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td id="cart-total">ducks</td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
+            <button class="checkout-button" id="checkout-button">Check Out</button>
         </section>
     </main>
     <footer>
@@ -39,7 +58,7 @@
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
 
-    <script type="module" src="./products.js"></script>
+    <script type="module" src="./shopping-cart.js"></script>
 </body>
 
 </html>
