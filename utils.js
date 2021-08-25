@@ -1,5 +1,3 @@
-
-
 export function findById(id, arrayOfProducts){
     for (let item of arrayOfProducts){
         if (item.id === id){
@@ -12,7 +10,6 @@ export function findById(id, arrayOfProducts){
 export function calcItemTotal(price, quantity){
     return price * quantity;
 }
-
 
 
 export function calcOrderTotal(cartArray, arrayofProducts){
