@@ -1,4 +1,4 @@
-import { addItemToCart } from '../utils.js';
+import { addItemToCart } from '../cart-api.js';
 
 export function renderProducts(obj){
     const li = document.createElement('li');

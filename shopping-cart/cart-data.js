@@ -9,6 +9,6 @@ export let arrayOfCartObj = [
     },
     {
         id: 3,
-        quantity: 4
+        quantity: 2
     }
 ];

@@ -244,5 +244,5 @@ const cartArray = [
 - function clearCart()
     1. localStorage.clear('ARRAY KEY');
 
-    
+
 

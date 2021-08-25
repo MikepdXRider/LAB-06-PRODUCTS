@@ -1,6 +1,7 @@
 import { renderLineItems } from './render-line-items.js';
-import { calcOrderTotal, clearCart, getCart } from '../utils.js';
+import { calcOrderTotal } from './shopping-cart-utils.js';
 import { productsArray } from '../products/duckys.js';
+import { getCart, clearCart } from '../cart-api.js';
 
 const tBodyEl = document.querySelector('#t-body');
 const tdCartTotal = document.getElementById('cart-total');
@@ -29,4 +30,5 @@ checkoutButton.addEventListener('click', () => {
     clearCart();
     // 3. Take user to home. 
     window.location = '../index.html';
-})
+});
+
