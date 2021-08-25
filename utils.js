@@ -1,4 +1,4 @@
-import { productsArray } from './products/duckys.js';
+
 
 export function findById(id, arrayOfProducts){
     for (let item of arrayOfProducts){
@@ -35,22 +35,30 @@ export function setCart(array){
     localStorage.setItem('CART', stringyArray);
 }
 
+
+
 // - function getCart()
 export function getCart(){
 //     1. localStorage.getItem('ARRAY KEY')
     const retrievedCart = localStorage.getItem('CART');
+//     1a. if retrieved cart is null, return an empty array.
+    if (retrievedCart === null){
+        return [];
+    } else {
 //     2. deserialize array(JSON.parse())
-    const unpackedCart = JSON.parse(retrievedCart);
+        const unpackedCart = JSON.parse(retrievedCart);
 //     3. return cart
-    return unpackedCart;
+        return unpackedCart;
+    }
 }
+
 
 // - function addItemToCart(id)
 export function addItemToCart(id){
 //     1. call getCart()
-    const cart = getCart()
+    const cart = getCart();
 //     2. call findByID(id)
-    const objInCart = findById(id, productsArray);
+    const objInCart = findById(id, cart);
 //     3. if there is no object that matches the id:
     if (!objInCart){
 //         - Create new object with the passed id and a new quantity.
@@ -67,6 +75,7 @@ export function addItemToCart(id){
 //     5. call setCart(returned array from step 1).
     setCart(cart);
 }
+
 
 // - function clearCart()
 export function clearCart(){

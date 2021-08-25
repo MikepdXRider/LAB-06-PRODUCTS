@@ -1,3 +1,5 @@
+import { addItemToCart } from '../utils.js';
+
 export function renderProducts(obj){
     const li = document.createElement('li');
     const titleDiv = document.createElement('div');
@@ -26,7 +28,7 @@ export function renderProducts(obj){
     priceDiv.classList.add('flex-price-category');
 
     button.addEventListener('click', () => {
-        alert(`You selected ${obj.name}!`);
+        addItemToCart(obj.id);
     });
 
     titleDiv.append(h3, button);
