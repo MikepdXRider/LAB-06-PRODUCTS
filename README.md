@@ -168,3 +168,81 @@ const cartArray = [
         3. Copy the cart line item data for the one that corresponds to the example, and either copy the product or use your findById function to locate the product and use as your input to your function
         4.Using the DOM API, create your static example programmatically using JavaScript. Start by creating the top level element (<tr> for the line item)
         5.Make the test pass! (Again, you may need to adjust html syntax - pay close attention to test details)
+
+<hr>
+<hr>
+<hr>
+
+## Day 3 - Local Storage
+
+<!-- 1) Make a drawing of your app. Simple "wireframes"
+2) Once you have a drawing, name the HTML elements you'll need to realize your vision
+3) For each HTML element ask: Why do I need this?
+4) Once we know _why_ we need each element, think about how to implement the "Why" as a "How"
+3) For each HTML element ask: Why do I need this?
+4) Once we know _why_ we need each element, think about how to implement the "Why" as a "How" -->
+<!-- 5) Is there some state we need to initialize? -->
+
+6) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?
+    - User clicks 'Add' button on products page.
+        1. Retrieve local storage
+            - If no local storage, create local storage
+        2. Access stored data.
+        3. Increase quantity of item in data.
+        4. Place data back in storage.
+    - User clicks 'Check Out' button.
+        1. Alert user of cart contents.
+            - getCart() to retrieve cart array
+            - stringify array so it's pretty.
+            - alert(pretty stringified array).
+        2. Clear cart contents.
+        3. Take user to home.
+<hr>
+7) Think about how to validate each of your steps
+
+`Console.log(*EVERYTHING*);` and check the application tab in dev tools.
+<hr>
+8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
+    
+    In local storage:
+```javascript
+const cartArray = [
+    {
+        id: 1,
+        quantity: 1
+    },
+    {
+        id: 2,
+        'etc..'
+    },
+    {},
+    'etc..'
+]
+```
+<hr>
+9) Consider functions. What are the expected inputs and outputs? Are any of them linked, which should occur first?
+
+- function setCart(array)
+    1. Serialize array(JSON.stringify()).
+    2. localStorage.setItem('ARRAY KEY', serialized array)
+
+- function getCart()
+    1. localStorage.getItem('ARRAY KEY')
+    2. deserialize array(JSON.parse())
+
+- function addItemToCart(id)
+    1. call getCart()
+    2. call findByID(id)
+    3. if there is no object that matches the id:
+        - Create new object with the passed id and a new quantity.
+        - push new object to array.
+    4. if there is a matching object:
+        - increase the objects quantity
+        - **Stretch Goal: Allow user to set/specificy a desired quantity before clicking add.
+    5. call setCart(returned array from step 1).
+
+- function clearCart()
+    1. localStorage.clear('ARRAY KEY');
+
+    
+
