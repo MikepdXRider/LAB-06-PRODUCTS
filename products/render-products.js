@@ -5,6 +5,7 @@ export function renderProducts(obj){
     const li = document.createElement('li');
     const titleDiv = document.createElement('div');
     const h3 = document.createElement('h3');
+    const buttonAndFormDiv = document.createElement('div');
     const button = document.createElement('button');
     const form = document.createElement('form');
     const select = document.createElement('select');
@@ -44,7 +45,8 @@ export function renderProducts(obj){
 
     select.append(option1, option2, option3);
     form.append(select);
-    titleDiv.append(h3, button, form);
+    buttonAndFormDiv.append(button, form);
+    titleDiv.append(h3, buttonAndFormDiv);
     priceDiv.append(categoryP, priceP);
     li.append(titleDiv, img, descriptionP, priceDiv);
     
