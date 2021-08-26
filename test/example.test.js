@@ -3,7 +3,7 @@ import { renderProducts } from '../products/render-products.js';
 import { renderLineItems } from '../shopping-cart/render-line-items.js';
 import { findById } from '../utils.js';
 import { calcItemTotal, calcOrderTotal } from '../shopping-cart/shopping-cart-utils.js';
-import { getCart } from '../cart-api.js';
+import { addItemToCart, getCart } from '../cart-api.js';
 
 
 const test = QUnit.test;
@@ -104,7 +104,7 @@ test('Input arrayOfCartObj array and productsArray into calcOrderTotal function,
 });
 
 
-// DAY THREE
+// Needs to be reworked, this is not sufficient.
 test('call getCart, expect an array', (expect) => {
     
     // Set up your arguments and expectations
@@ -115,6 +115,23 @@ test('call getCart, expect an array', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+
+test('sends a cart to storage, calls addItemToCart, checks that addItemToCart makes the correct mutation', (expect) => {
+    const beforeCart = [{ id: 1, quantity: 1 }, { id: 2, quantity: 2 }];
+
+    localStorage.setItem('CART', JSON.stringify(beforeCart));
+
+    addItemToCart(1, 1);
+   
+    const afterCart = [{ id: 1, quantity: 2 }, { id: 2, quantity: 2 }];
+    
+    const actual = JSON.parse(localStorage.getItem('CART'));
+
+    expect.deepEqual(actual, afterCart);
+});
+
+
 
 
 

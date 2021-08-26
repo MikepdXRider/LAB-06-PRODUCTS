@@ -20,6 +20,7 @@ export function renderProducts(obj){
 
     h3.textContent = obj.name;
     button.textContent = '+';
+    // Option creation and mutation could be inside a for loop.
     option1.textContent = '1';
     option2.textContent = '2';
     option3.textContent = '3';
@@ -39,6 +40,7 @@ export function renderProducts(obj){
     priceDiv.classList.add('flex-price-category');
 
     button.addEventListener('click', () => {
+        // In the future, set values to the options and grab those instead of the select value. Often times the options will be human readable(a string of text which includes the vale), in this case setting value properties/attributes on options is a better practice.
         const userQtyInput = Number(select.value);
         addItemToCart(obj.id, userQtyInput);
     });
