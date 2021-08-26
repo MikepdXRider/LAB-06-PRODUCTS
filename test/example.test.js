@@ -1,7 +1,8 @@
 // IMPORT MODULES under test here:
 import { renderProducts } from '../products/render-products.js';
 import { renderLineItems } from '../shopping-cart/render-line-items.js';
-import { calcItemTotal, calcOrderTotal, findById } from '../utils.js';
+import { findById } from '../utils.js';
+import { calcItemTotal, calcOrderTotal } from '../shopping-cart/shopping-cart-utils.js';
 // import { productsArray } from '../products/duckys.js';
 // import { arrayOfCartObj } from '../shopping-cart/cart-data.js';
 

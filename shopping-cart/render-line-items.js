@@ -1,5 +1,6 @@
-import { findById, calcItemTotal } from '../utils.js';
+import { findById } from '../utils.js';
 import { productsArray } from '../products/duckys.js';
+import { calcItemTotal } from './shopping-cart-utils.js';
 
 export function renderLineItems(cartObj){
     const tablerow = document.createElement('tr');
