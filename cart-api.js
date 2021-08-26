@@ -26,7 +26,7 @@ export function getCart(){
     
     
     // - function addItemToCart(id)
-export function addItemToCart(id){
+export function addItemToCart(id, userInput){
     //     1. call getCart()
     const cart = getCart();
     //     2. call findByID(id)
@@ -34,14 +34,14 @@ export function addItemToCart(id){
     //     3. if there is no object that matches the id:
     if (!objInCart){
     //         - Create new object with the passed id and a new quantity.
-        const newObj = { id : id, quantity: 1 };
+        const newObj = { id : id, quantity: userInput };
     //         - push new object to array.
         cart.push(newObj);
     }
     //     4. if there is a matching object:
     if (objInCart){
     //         - increase the objects quantity
-        objInCart.quantity++;
+        objInCart.quantity += userInput;
     //         - **Stretch Goal: Allow user to set/specificy a desired quantity before clicking add.
     }
     //     5. call setCart(returned array from step 1).

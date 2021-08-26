@@ -3,8 +3,8 @@ import { renderProducts } from '../products/render-products.js';
 import { renderLineItems } from '../shopping-cart/render-line-items.js';
 import { findById } from '../utils.js';
 import { calcItemTotal, calcOrderTotal } from '../shopping-cart/shopping-cart-utils.js';
-// import { productsArray } from '../products/duckys.js';
-// import { arrayOfCartObj } from '../shopping-cart/cart-data.js';
+import { getCart } from '../cart-api.js';
+
 
 const test = QUnit.test;
 
@@ -36,6 +36,7 @@ test('input an id and array of products into findById function, expect an object
 });
 
 
+
 test('input 3 and 3 into calcItemTotal function, expect 9', (expect) => {
     //Arrange
     // Set up your arguments and expectations
@@ -49,10 +50,11 @@ test('input 3 and 3 into calcItemTotal function, expect 9', (expect) => {
 });
 
 
+
 test('input an object into renderProducts function, expect an HTML element', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<li class="product-list-item"><div class="title-button-container"><h3 class="product-name">product-name</h3><button class="add-to-cart-button" id="add-to-cart-button">+</button></div><img src="https://placekitten.com/320/200" alt="product-image"><p class="description">Product description that is cool AF</p><div class="flex-price-category"><p>product-category</p><p>$4</p></div></li>';
+    const expected = '<li class="product-list-item"><div class="title-button-container"><h3 class="product-name">product-name</h3><div><button class="add-to-cart-button" id="add-to-cart-button">+</button><form><select id="user-input"><option>1</option><option>2</option><option>3</option></select></form></div></div><img src="https://placekitten.com/320/200" alt="product-image"><p class="description">Product description that is cool AF</p><div class="flex-price-category"><p>product-category</p><p>$4</p></div></li>';
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = renderProducts({
@@ -69,6 +71,7 @@ test('input an object into renderProducts function, expect an HTML element', (ex
 });
 
 
+
 test('Input a cart object into renderLineItems function, expect a string of HTML', (expect) => {
     //Arrange
     // Set up your arguments and expectations
@@ -79,6 +82,7 @@ test('Input a cart object into renderLineItems function, expect a string of HTML
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual.outerHTML, expected);
 });
+
 
 
 test('Input arrayOfCartObj array and productsArray into calcOrderTotal function, expect 6000000', (expect) => {
@@ -100,13 +104,26 @@ test('Input arrayOfCartObj array and productsArray into calcOrderTotal function,
 });
 
 
-// Test only works if cart and products are static.
-// test('Input arrayOfCartObj array and productsArray into calcOrderTotal function, expect 6000000 out', (expect) => {
-//     //Arrange
+// DAY THREE
+test('call getCart, expect an array', (expect) => {
+    
+    // Set up your arguments and expectations
+    const expected = true;
+    // Call the function you're testing and set the result to a const
+    const actual = Array.isArray(getCart());
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+
+
+// test('call setCart with static array as arguement, expect getCart()', (expect) => {
+    
 //     // Set up your arguments and expectations
-//     const expected = '$6,000,000.00';
+//     const expected = getCart();
 //     // Call the function you're testing and set the result to a const
-//     const actual = calcOrderTotal(arrayOfCartObj, productsArray);
+//     const actual = setCart([]);
 //     //Expect
 //     // Make assertions about what is expected versus the actual result
 //     expect.equal(actual, expected);

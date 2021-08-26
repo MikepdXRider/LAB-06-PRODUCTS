@@ -248,13 +248,16 @@ const cartArray = [
 10) Stretch Goals
 
 Add Quantity of Products
-    Add a quantity drop-down to the rendered product. When the "Add" button is clicked, add the indicated amount of product to the quantity.
+    Add a quantity drop-down to the rendered product. When the "Add" button is clicked, add the indicated amount of product to the objects quantity key.
     - Html: Must incorporate this into the renderProducts function.
         <!-- https://www.w3schools.com/html/html_forms.asp -->
         <!-- https://www.w3schools.com/tags/tag_select.asp -->
         - Form element to contain select elements.
-            - Select element to contain option elements
+            - Select element to contain option elements -> needs to have an ID so we can access user input.
                 - Optional: label
-                    - 5 x option to contain the users option -> Each option needs a value corresponding to the text content. 
+                    - 3 x option to contain the users option -> Each option needs a value corresponding to the text content. 
     - Events:
-        - User clicks add 
+        - User clicks 'Add' button on products page.
+            - Retrieve userInput(textcontent) from select element. 
+                - Pass this value to addItemToCart -> increase the objects quantity by retrieved content (obj.quantity += UserInput ).
+    
