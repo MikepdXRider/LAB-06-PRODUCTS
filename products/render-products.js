@@ -1,5 +1,6 @@
 import { addItemToCart } from '../cart-api.js';
 
+
 export function renderProducts(obj){
     const li = document.createElement('li');
     const titleDiv = document.createElement('div');

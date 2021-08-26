@@ -1,8 +1,10 @@
 import { findById } from '../utils.js';
 
+
 export function calcItemTotal(price, quantity){
     return price * quantity;
 }
+
 
 export function calcOrderTotal(cartArray, arrayofProducts){
     let accumulator = 0;

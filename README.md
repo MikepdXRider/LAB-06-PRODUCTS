@@ -244,5 +244,17 @@ const cartArray = [
 - function clearCart()
     1. localStorage.clear('ARRAY KEY');
 
+<hr>
+10) Stretch Goals
 
-
+Add Quantity of Products
+    Add a quantity drop-down to the rendered product. When the "Add" button is clicked, add the indicated amount of product to the quantity.
+    - Html: Must incorporate this into the renderProducts function.
+        <!-- https://www.w3schools.com/html/html_forms.asp -->
+        <!-- https://www.w3schools.com/tags/tag_select.asp -->
+        - Form element to contain select elements.
+            - Select element to contain option elements
+                - Optional: label
+                    - 5 x option to contain the users option -> Each option needs a value corresponding to the text content. 
+    - Events:
+        - User clicks add 
