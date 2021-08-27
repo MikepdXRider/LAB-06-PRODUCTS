@@ -23,7 +23,7 @@
         getItem: function (key) {
           return key in storage ? storage[key] : null;
         },
-        removeItem: function (key) {
+        clear: function (key) {
           delete storage[key];
         },
         get length() {
