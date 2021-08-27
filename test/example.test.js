@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 // IMPORT MODULES under test here:
 import { renderProducts } from '../products/render-products.js';
 import { renderLineItems } from '../shopping-cart/render-line-items.js';
 import { findById } from '../utils.js';
 import { calcItemTotal, calcOrderTotal } from '../shopping-cart/shopping-cart-utils.js';
-import { addItemToCart, getCart } from '../cart-api.js';
+import { addItemToCart, clearCart, getCart, setCart } from '../cart-api.js';
 
 
 const test = QUnit.test;
@@ -104,18 +105,54 @@ test('Input arrayOfCartObj array and productsArray into calcOrderTotal function,
 });
 
 
-// Needs to be reworked, this is not sufficient.
-test('call getCart, expect an array', (expect) => {
+test('call getCart, expect a staticCart', (expect) => {
+    const staticCart = [{ id: 1, quantity: 1 }, { id: 2, quantity: 2 }];
     
-    // Set up your arguments and expectations
-    const expected = true;
-    // Call the function you're testing and set the result to a const
-    const actual = Array.isArray(getCart());
-    //Expect
+    const serializedStateCart = JSON.stringify(staticCart);
+
+    localStorage.setItem('CART', serializedStateCart);
+    
+    const actual = getCart('CART');
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, staticCart);
+});
+
+
+test('call setCart, expect a staticCart', (expect) => {
+    const staticCartArr = [{ id: 3, quantity: 3 }, { id: 4, quantity: 4 }];
+    
+    setCart(staticCartArr);
+    
+    const expected = JSON.parse(localStorage.getItem('CART'));
+    
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(staticCartArr, expected);
+});
+
+// 
+// 
+// 
+test('call clearCart, expect null', (expect) => {
+    const anotherStaticCartArr = [{ id: 5, quantity: 5 }, { id: 6, quantity: 6 }];
+
+
+    localStorage.setItem('CART', JSON.stringify(anotherStaticCartArr));
+    
+    // console.log(JSON.parse(localStorage.getItem('CART')));
+    
+    clearCart();
+    // localStorage.clear('CART'); 
+
+    const actual = localStorage.getItem('CART');
+    const expected = null;
+
+    
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
-
+// 
+// 
+// 
 
 test('sends a cart to storage, calls addItemToCart, checks that addItemToCart makes the correct mutation', (expect) => {
     const beforeCart = [{ id: 1, quantity: 1 }, { id: 2, quantity: 2 }];
@@ -130,6 +167,8 @@ test('sends a cart to storage, calls addItemToCart, checks that addItemToCart ma
 
     expect.deepEqual(actual, afterCart);
 });
+
+
 
 
 

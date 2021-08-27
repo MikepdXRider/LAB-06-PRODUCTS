@@ -52,5 +52,6 @@ export function addItemToCart(id, userInput){
     // - function clearCart()
 export function clearCart(){
     //     1. localStorage.clear('ARRAY KEY');
+    
     localStorage.clear('CART');    
 }
