@@ -47,3 +47,9 @@ export function addItemToCart(id, userInput){
 export function clearCart(){
     localStorage.clear('CART');    
 }
+
+
+export function checkCartStatus(){
+    const stringyArray = localStorage.getItem('CART');
+    return stringyArray ? true : false;
+}
