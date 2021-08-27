@@ -1,17 +1,18 @@
 import { findById } from './utils.js';
 
+export const CART = 'CART';
 
 export function setCart(array){
 
     const serializedCartArray = JSON.stringify(array);
   
-    localStorage.setItem('CART', serializedCartArray);
+    localStorage.setItem(CART, serializedCartArray);
 }
     
     
 export function getCart(){
    
-    const serializedCartArray = localStorage.getItem('CART');
+    const serializedCartArray = localStorage.getItem(CART);
    
     if (serializedCartArray === null){
         return [];
@@ -45,11 +46,11 @@ export function addItemToCart(id, userInput){
     
     
 export function clearCart(){
-    localStorage.clear('CART');    
+    localStorage.clear(CART);    
 }
 
 
 export function checkCartStatus(){
-    const stringyArray = localStorage.getItem('CART');
+    const stringyArray = localStorage.getItem(CART);
     return stringyArray ? true : false;
 }

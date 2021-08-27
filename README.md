@@ -295,3 +295,15 @@ Event:
 	3. Access individual properties using: (`data.get(property)`)
 	4. Create a new object utilizing step 2(could be function).
 	5. Pass returned obj into the addProducts function.
+
+
+<hr>
+<hr>
+<hr>
+
+
+Some extra neat things:
+    - User can't access cart unless there are items in the cart. 
+    - We're officialy, dev-ducky has a tab icon!
+    - The admin form automatically assigns a new ID to the generated product object.
+    - We tested clearCart() function, making a small tweak to the methods in the mock storage in the test/index.html file.

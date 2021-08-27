@@ -1,9 +1,11 @@
 import { renderLineItems } from './render-line-items.js';
 import { calcOrderTotal } from './shopping-cart-utils.js';
-import { productsArray } from '../products/duckys.js';
+// import { productsArray } from '../z_products/duckys.js';
 import { getCart, clearCart } from '../cart-api.js';
+import { getProducts } from '../z_admin-page/admin-utils.js';
 
 const cart = getCart();
+const products = getProducts();
 
 const tBodyEl = document.querySelector('#t-body');
 const tdCartTotal = document.getElementById('cart-total');
@@ -16,7 +18,7 @@ for (let obj of cart) {
 }
 
  
-const cartTotal = calcOrderTotal(cart, productsArray);
+const cartTotal = calcOrderTotal(cart, products);
 tdCartTotal.textContent = cartTotal;
 
 
