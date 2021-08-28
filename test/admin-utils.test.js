@@ -2,7 +2,7 @@ import { addProducts, PRODUCTS } from '../z_admin-page/admin-utils.js';
 
 const test = QUnit.test;
 
-test('call addProducts with a static object, return a products array from localstorage containing static object', (expect) => {
+test('call addProducts, expect static object', (expect) => {
     //clears storage of any products
     localStorage.clear(PRODUCTS);
     
