@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Dev-Ducky: Admin</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Admin
+        </h1>
+    </header>
+    <main>
+        <section class="main-section">
+            <form action="submit" id="form">
+                <label for="Name">
+                    Name
+                    <input name="name" type="text" />
+                </label>
+                <label for="img">
+                    Img link
+                    <input name="img" type="text" />
+                </label>
+                <label for="description">
+                    Description
+                    <input name="description" type="text" />
+                </label>
+                <label for="category">
+                    Category
+                    <input name="category" type="text" placeholder="Front End Dev"/>
+                </label>
+                <label for="price">
+                    Price
+                    <input name="price" type="text" placeholder="1000000" />
+                </label>
+                <button>Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="nav-link-container">
+            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="../z_products/index.html">Products</a>
+            <a class="nav-link" href="../z_shopping-cart/index.html">Cart</a>
+        </div>
+        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+    </footer>
+
+    <!-- <script type="module" src="../app.js"></script> -->
+    <script type="module" src="./admin.js"></script>
+</body>
+
+</html>

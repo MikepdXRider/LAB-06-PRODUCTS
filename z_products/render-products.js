@@ -1,6 +1,5 @@
 import { addItemToCart } from '../cart-api.js';
 
-
 export function renderProducts(obj){
     const li = document.createElement('li');
     const titleDiv = document.createElement('div');
@@ -43,6 +42,11 @@ export function renderProducts(obj){
         // In the future, set values to the options and grab those instead of the select value. Often times the options will be human readable(a string of text which includes the vale), in this case setting value properties/attributes on options is a better practice.
         const userQtyInput = Number(select.value);
         addItemToCart(obj.id, userQtyInput);
+
+        const cartLinkNodeList = document.querySelectorAll('.cart-link');
+        for (let i = 0; i < cartLinkNodeList.length; i++){
+            cartLinkNodeList[i].style.visibility = 'visible';
+        }
     });
 
     select.append(option1, option2, option3);

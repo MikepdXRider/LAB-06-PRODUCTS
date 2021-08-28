@@ -36,3 +36,20 @@ p{
 .rubber-ducky-gif{
     height: 200px;
 }
+
+.password-div{
+    background-color: rgba(255, 0, 0, 0);
+    align-self: flex-start;
+    position: relative;
+    top: 50px;
+    left: 5px;
+    color: grey;
+}
+
+.password-div:hover{
+    cursor: pointer;
+}
+
+.password-div:active{
+    color: rgb(255, 255, 255);
+}

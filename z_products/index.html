@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="./products.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -34,11 +34,12 @@
     <footer>
         <div class="nav-link-container">
             <a class="nav-link" href="../index.html">Home</a>
-            <a class="nav-link" href="../shopping-cart/">Cart</a>
+            <a id="cart-link" class="nav-link cart-link" href="../z_shopping-cart/index.html">Cart</a>
         </div>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
 
+    <script type="module" src="../utils.js"></script>
     <script type="module" src="./products.js"></script>
 </body>
 
