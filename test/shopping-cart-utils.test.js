@@ -2,7 +2,7 @@ import { calcItemTotal, calcOrderTotal } from '../z_shopping-cart/shopping-cart-
 
 const test = QUnit.test;
 
-test('input 3 and 3 into calcItemTotal function, expect 9', (expect) => {
+test('input 3 and 3 into calcItemTotal, expect 9', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = 9;
@@ -15,7 +15,7 @@ test('input 3 and 3 into calcItemTotal function, expect 9', (expect) => {
 });
 
 
-test('Input arrayOfCartObj array and productsArray into calcOrderTotal function, expect 6000000', (expect) => {
+test('call calcOrderTotal, expect 6000000', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = '$250,000.00';

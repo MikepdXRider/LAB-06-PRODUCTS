@@ -2,7 +2,7 @@ import { findById } from '../utils.js';
 
 const test = QUnit.test;
 
-test('input an id and array of products into findById function, expect an object', (expect) => {
+test('call findById, expect an object', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = {

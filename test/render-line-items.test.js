@@ -2,7 +2,7 @@ import { renderLineItems } from '../z_shopping-cart/render-line-items.js';
 
 const test = QUnit.test;
 
-test('Input a cart object into renderLineItems function, expect a string of HTML', (expect) => {
+test('call renderLineItems, expect a string of HTML', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = '<tr><td>Classic Ducky</td><td>250000</td><td>2</td><td>500000</td></tr>';

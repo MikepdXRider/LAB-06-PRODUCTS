@@ -42,7 +42,7 @@ test('call clearCart, expect null', (expect) => {
 });
 
 
-test('sends a cart to storage, calls addItemToCart, checks that addItemToCart makes the correct mutation', (expect) => {
+test('call addItemToCart, expect a mutated cart', (expect) => {
     const beforeCart = [{ id: 1, quantity: 1 }, { id: 2, quantity: 2 }];
 
     localStorage.setItem(CART, JSON.stringify(beforeCart));
