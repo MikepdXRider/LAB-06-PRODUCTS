@@ -8,7 +8,17 @@ form.addEventListener('submit', () => {
     event.preventDefault();
 
     const data = new FormData(form);
-
+    
+    //*Verifying User Input
+    const objPropertiesArray = ['name', 'img', 'description', 'category', 'price'];
+    for (let property of objPropertiesArray){
+        if (data.get(`${property}`) === ''){
+            alert('Please fill out all fields');
+            return;
+        }
+    }
+    //*
+    
     const products = getProducts();
 
     const newObj = {
