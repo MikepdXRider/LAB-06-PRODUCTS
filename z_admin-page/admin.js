@@ -9,7 +9,7 @@ form.addEventListener('submit', () => {
 
     const data = new FormData(form);
     
-    //*Verifying User Input
+    //*Verifys User Input
     const objPropertiesArray = ['name', 'img', 'description', 'category', 'price'];
     for (let property of objPropertiesArray){
         if (data.get(`${property}`) === ''){

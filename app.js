@@ -10,3 +10,15 @@ for (let i = 0; i < cartLinkNodeList.length; i++){
         cartLinkNodeList[i].style.visibility = 'hidden';
     }
 }
+
+const adminAccess = document.querySelector('.password-div');
+
+adminAccess.addEventListener('click', () => {
+    const password = prompt('Password:');
+    if (password === 'ducky'){
+        adminAccess.style.zIndex = -1;
+        window.location = './z_admin-page/index.html';
+    } else {
+        alert('Incorrect password');
+    }
+});
