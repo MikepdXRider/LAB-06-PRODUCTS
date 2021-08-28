@@ -1,4 +1,4 @@
-import { calcItemTotal, calcOrderTotal } from '../shopping-cart/shopping-cart-utils.js';
+import { calcItemTotal, calcOrderTotal } from '../z_shopping-cart/shopping-cart-utils.js';
 
 const test = QUnit.test;
 
