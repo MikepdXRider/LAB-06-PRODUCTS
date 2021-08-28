@@ -265,7 +265,7 @@ Add Quantity of Products
 <hr>
 <hr>
 
-###Day 4 - Admin Page(stretch)
+### Day 4 - Admin Page(stretch)
 
 STRETCH LAB:
 Admin Page with Forms which grant the ability to submit a product to the local storage.
