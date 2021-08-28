@@ -306,8 +306,10 @@ Event:
 - User can't access cart unless there are items in the cart. 
 - We're officialy, dev-ducky has a tab icon!
 - The admin form automatically assigns a new ID to the generated product object.
-- We tested clearCart() function, making a small tweak to the methods in the mock storage in the test/index.html file.
 - The admin page is only accessible to the user through dev tools or a password prompt.
+- The admin product form includes validation.
+- We tested clearCart() function, making a small tweak to the methods in the mock storage in the test/index.html file.
+ 
 
     
 
